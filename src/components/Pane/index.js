@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import Button from '../Button'
-import Title from '../Title'
+//import Button from '../Button'
+import Title from '../Title';
+//import Date from '../Date';
+//import Location from '../Location'
 
 import css from "./index.module.scss";
 
@@ -16,7 +18,7 @@ class Pane extends Component {
           )
         }
         <Title>{this.props.title}</Title>
-        <Button size="sm"><i className="fa fa-arrow-right"></i></Button>
+        
       </div>
     )
   }
@@ -32,3 +34,6 @@ Pane.defaultProps = {
 };
 
 export default Pane;
+
+
+// <Button size="sm"><i className="fa fa-arrow-right"></i></Button>
