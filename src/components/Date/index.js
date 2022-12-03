@@ -10,12 +10,15 @@ class Date extends Component {
   render() {
     return(
      <div className={`${this.props.type === "headerDate" ? css.headerDate : css.cardDate}`}>
-        <p className={`${css.day}`}>{this.props.day}</p>
-        <p className={`${css.month}`}>{this.props.month}</p>
+        <p className={`${css.day}`}>23</p>
+        <p className={`${css.month}`}>03</p>
      </div>
     )
   }
 }
+
+// remettre 'this.props.day' et 'this.props.month' dans le return
+
 
 Date.propTypes = {
   type: PropTypes.string,
