@@ -1,15 +1,23 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import css from "./index.module.scss";
+import Pane from '../Pane';
+import Img from '../Pane/gardener_cover.png';
 
 
 class Page extends Component {
     render() {
         return(
-            <div className={`${css.mainBlock} mainBlock ${'mainBlock-' + this.props.type} ${'mainBlock-' + this.props.size}`}>{this.props.children}</div>
+            <div>
+                <Pane type={"header"} cover={Img} location="Domaine de la Grange - la Prévôté" title="Le Printemps Des Jardiniers"/>
+                <Pane  type={"card"}/>
+            </div>
         )
     }
 }
+
+Page.propTypes = {};
+Page.defaultProps = {};
+
 
 export default Page;

@@ -6,9 +6,15 @@
 @import "vendors/font-awesome/fa-solid";
 
 $color-primary: #28a49a;
+$color-secondary: #838383;
 
 body{
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 16px;
   line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }

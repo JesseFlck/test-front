@@ -1,7 +1,21 @@
 .title{
   font-size: 26px;
-  font-weight:900;
-  -moz-osx-font-smoothing: grayscale;
-  margin:0;
-  z-index:999;
+  font-weight: 900;
+  margin: 0;
+  z-index: 999;
+
+  &_header {
+    color: white;
+    text-shadow: 2px 2px 5px #0000001c;
+  }
+
+  &_card {
+    font-weight: 600;
+    font-size: 22px;
+    
+    &:hover{
+      color: $color-primary;
+      cursor: pointer;
+    }
+  }
 }
