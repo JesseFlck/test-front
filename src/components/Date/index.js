@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import css from "./index.module.scss";
+import Events from "../../mocks/events.json"
+
 
 
 // Mise en place de l'élément date

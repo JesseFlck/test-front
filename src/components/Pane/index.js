@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
@@ -16,6 +16,7 @@ import Events from '../../mocks/events.json'
 // Mise en place des parties des événements
 
 class Pane extends Component {
+
   render() {
     return(
       <div className={`${css.pane} ${this.props.type === 'header' ? css.header : css.card} ${this.props.cover ? css.withCover : ''}`}>
@@ -43,22 +44,20 @@ class Pane extends Component {
                 <div className={css.smallEvents}>
                   {Events.map (event => {
                     return(
-                      <a href='#'>
-                        <div className={css.card}>
-                          <div className={css.card_date}>
-                            <Date type={'cardDate'}>{event.date}</Date>
-                          </div>
-                          <div className={css.card_emot} >
-                            {event.icon}
-                          </div>
-                          <div className={css.card_title}>
-                            <a href={event.url}><Title types={'card'}>{event.title}</Title></a>
-                              <div className={css.card_location}>
-                                <Location types={'cardLocation'}>{event.address.place}</Location>
-                              </div>
-                          </div>
+                      <div className={css.card} onClick={''}>
+                        <div className={css.card_date}>
+                          <Date type={'cardDate'}>{event.date}</Date>
                         </div>
-                      </a>
+                        <div className={css.card_emot} >
+                          {event.icon}
+                        </div>
+                        <div className={css.card_title}>
+                          <a href={event.url}><Title types={'card'}>{event.title}</Title></a>
+                            <div className={css.card_location}>
+                              <Location types={'cardLocation'}>{event.address.place}</Location>
+                            </div>
+                        </div>
+                      </div>
                     )
                   })}
                 </div>

@@ -10,4 +10,3 @@ storiesOf('Exercise/Components/Pane', module)
 )).add('paneCard', () => (
     <Pane type={'card'}/>
 ));
- 

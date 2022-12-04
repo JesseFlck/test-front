@@ -1,0 +1,86 @@
+.card{
+      margin-top: 10px;
+      height: 110px;
+      width: 450px;
+      display: flex;
+      border:1px solid #d6d5d5;
+      width: 450px;
+      border-radius:4px;
+    
+      &:hover{
+        background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.126));
+        cursor: pointer;
+      }
+  
+      &_date{
+        padding-top: 10px;
+      }
+    
+      &_title{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    
+      &_location{
+        display: flex;
+        align-items: center;
+        margin-top: 2px;
+      }
+    
+      &_emot{
+        font-size: 30px;
+        padding: 10px 20px 0 10px;
+      }
+    }
+  
+  
+  .cover{
+    width:100%;
+    height:100%;
+    background-size:cover;
+    background-position:top;
+    border-radius:4px;
+    position:absolute;
+    top:0px;
+    bottom:0px;
+    left:0px;
+  
+    &_mainCard {
+      position: absolute;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      bottom: 0px;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.678));
+      border-radius:4px;
+    }
+  
+    &_title{
+      position: absolute;
+      bottom: 20px;
+    }
+  
+    &_header{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-right: 120px;
+    }
+  
+    &_location{
+      width: 62%;
+      padding-left: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  
+    &_button{
+      position: absolute;
+      bottom: 25px;
+      right: 20px;
+    }
+  }
