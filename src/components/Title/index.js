@@ -15,6 +15,7 @@ class Title extends Component {
 }
 
 Title.propTypes = {types: PropTypes.string};
+
 Title.defaultProps = {};
 
 export default Title;

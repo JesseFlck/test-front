@@ -19,7 +19,7 @@ class Date extends Component {
   }
 }
 
-// remettre 'this.props.day' et 'this.props.month' dans le return
+// remettre 'this.props.day' et 'this.props.month' dans le return une fois l'élément récupéré dans event.json dans Pane
 
 
 Date.propTypes = {
@@ -27,6 +27,7 @@ Date.propTypes = {
   day: PropTypes.string,
   month: PropTypes.string
 };
+
 Date.defaultProps = {};
 
 export default Date;

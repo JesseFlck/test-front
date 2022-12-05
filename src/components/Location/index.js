@@ -17,6 +17,7 @@ class Location extends Component {
 }
 
 Location.propTypes = {types: PropTypes.string};
+
 Location.defaultProps = {};
 
 export default Location;

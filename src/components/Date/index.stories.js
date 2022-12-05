@@ -9,4 +9,3 @@ storiesOf('Exercise/Components/Date', module)
   )).add('cardDate', () => (
     <Date type={'cardDate'} day="23" month="03"></Date>
   ));
-  

@@ -8,7 +8,7 @@ import Date from '../../Date';
 import Location from '../../Location';
 
 
-// Bouton de l'événement principal
+// Mise en place de la card des événements secondaires
 
 class SmallEvents extends Component {
   render() {

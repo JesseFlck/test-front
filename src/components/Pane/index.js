@@ -9,41 +9,44 @@ import Title from '../Title';
 import Button from '../Button'
 import Date from '../Date';
 import Location from '../Location';
+
+// Récupération des données des événements
 import Events from '../../mocks/events.json'
 
 
 
-// Mise en place des parties des événements
+// Mise en place des cards avec mapping des événements et intégration des données
 
 class Pane extends Component {
 
   render() {
     return(
-      <div className={`${css.pane} ${this.props.type === 'header' ? css.header : css.card} ${this.props.cover ? css.withCover : ''}`}>
-        {
-          // Evénement principal
-          this.props.cover ? (
-            <div className={css.cover} style={{ backgroundImage: "url(" + this.props.cover + ")" }}>
-              <div className={css.cover_mainCard}>
-                <div className={css.cover_title}>
-                  <div className={css.cover_header}>
-                    <Date type={'headerDate'}></Date>
-                    <Title types={'header'}>{this.props.title}</Title>
+      <div>
+        {Events.map (event => {
+          return(
+            <div className={`${css.pane} ${this.props.type === 'header' ? css.header : css.card} ${this.props.cover ? css.withCover : ''}`}>
+              {
+                // Evénement principal
+                this.props.cover ? (
+                  <div className={css.cover} style={{ backgroundImage: "url(" + event.cover + ")" }}>
+                    <div className={css.cover_mainCard}>
+                      <div className={css.cover_title}>
+                        <div className={css.cover_header}>
+                          <Date type={'headerDate'}></Date>
+                          <Title types={'header'}>{event.title}</Title>
+                        </div>
+                        <div className={css.cover_location}>
+                          <Location types={'headerLocation'}>{event.address.place}</Location>
+                        </div>
+                      </div>
+                      <div className={css.cover_button}>
+                        <Button><FontAwesomeIcon icon={faChevronRight} /></Button>
+                      </div>
+                    </div>
                   </div>
-                  <div className={css.cover_location}>
-                    <Location types={'headerLocation'}>{this.props.location}</Location>
-                  </div>
-                </div>
-                <div className={css.cover_button}>
-                  <Button><FontAwesomeIcon icon={faChevronRight} /></Button>
-                </div>
-              </div>
-            </div>
-          ) : (
-            // Evénements secondaires
-                <div className={css.smallEvents}>
-                  {Events.map (event => {
-                    return(
+                ) : (
+                  // Evénements secondaires
+                    <div className={css.smallEvents}>
                       <div className={css.card} onClick={''}>
                         <div className={css.card_date}>
                           <Date type={'cardDate'}>{event.date}</Date>
@@ -58,11 +61,12 @@ class Pane extends Component {
                             </div>
                         </div>
                       </div>
-                    )
-                  })}
-                </div>
-              )
-        }
+                    </div>
+                  )
+              }
+            </div>
+          )
+        })}
       </div>
     )
   }

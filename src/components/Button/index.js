@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import css from "./index.module.scss";
 
 
-// Bouton de l'événement principal
+// Mise en place du bouton de l'événement principal
 
 class Button extends Component {
   render() {
@@ -13,6 +13,7 @@ class Button extends Component {
     )
   }
 }
+
 
 Button.propTypes = {};
 

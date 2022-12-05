@@ -11,7 +11,7 @@ import Date from '../../Date';
 import Location from '../../Location';
 
 
-// Bouton de l'événement principal
+// Mise en place de la card de l'événement principal
 
 class MainEvent extends Component {
   render() {

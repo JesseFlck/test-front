@@ -1,0 +1,10 @@
+- Le dossier Pane contient deux sous-dossiers (MainEvent et SmallEvent) qui comportent
+    les card réutilisables pour chaque type d'événement.
+
+- Pane contient également un fichier global pour boucler sur les éléments et les
+    afficher en intégrant les données d'events.json.
+
+- Il n'y a pour l'instant pas de sélection d'un élément "important", ils sont donc tous
+    affichés en doublon afin de pouvoir tout de même démontrer l'intégration des éléments
+    mais à terme il s'agira de pouvoir cliquer sur chaque card d'événement secondaire pour
+    pouvoir l'afficher en un unique événement principal.
