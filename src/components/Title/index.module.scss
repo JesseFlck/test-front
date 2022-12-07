@@ -1,17 +1,16 @@
 .title{
-  font-size: 26px;
-  font-weight: 900;
   margin: 0;
   z-index: 999;
-
+  
   &_header {
+    font-size: 38px;
+    line-height: 45px;
     color: white;
     text-shadow: 2px 2px 5px #0000001c;
   }
 
   &_card {
-    font-weight: 600;
-    font-size: 22px;
+    font-size: 24px;
     
     &:hover{
       color: $color-primary;

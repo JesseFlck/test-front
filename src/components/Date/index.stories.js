@@ -5,7 +5,13 @@ import Date from "./";
 
 storiesOf('Exercise/Components/Date', module)
   .add('headerDate', () => (
-    <Date type={"headerDate"} day="23" month="03"></Date>
+    <Date
+      type={"headerDate"}
+      date="03/23/2021"
+    />
   )).add('cardDate', () => (
-    <Date type={'cardDate'} day="23" month="03"></Date>
+    <Date
+      type={'cardDate'}
+      date="03/23/2021"
+    />
   ));

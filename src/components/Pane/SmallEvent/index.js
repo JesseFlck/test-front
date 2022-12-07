@@ -13,25 +13,34 @@ import Location from '../../Location';
 class SmallEvents extends Component {
   render() {
     return(
-      <div className={css.card} onClick={''}>
-        <div className={css.card_date}>
-          <Date type={'cardDate'}>{this.props.date}</Date>
-        </div>
-        <div className={css.card_emot} >
-          {this.props.icon}
-        </div>
-        <div className={css.card_title}>
-          <a href='#'><Title types={'card'}>{this.props.title}</Title></a>
-          <div className={css.card_location}>
-            <Location types={'cardLocation'}>{this.props.location}</Location>
+      <div>
+        <a href={this.props.url}>
+          <div className={css.card} onClick={this.props.onClick}>
+            <div className={css.card_date}>
+              <Date type={'cardDate'} date={this.props.date}/>
+            </div>
+            <div className={css.card_emot} >
+              {this.props.icon}
+            </div>
+            <div className={css.card_title}>
+              <a href={this.props.url}><Title types={'card'}>{this.props.title}</Title></a>
+              <div className={css.card_location}>
+                <Location types={'cardLocation'}>{this.props.location}</Location>
+              </div>
+            </div>
           </div>
-        </div>
+        </a>
       </div>
     )
   }
 } 
 
-SmallEvents.propTypes = {};
+SmallEvents.propTypes = {
+  title: PropTypes.string,
+  date: PropTypes.string,
+  location: PropTypes.string,
+  url: PropTypes.string
+};
 
 SmallEvents.defaultProps = {};
 

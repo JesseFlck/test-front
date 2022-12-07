@@ -9,7 +9,9 @@ import css from "./index.module.scss";
 class Button extends Component {
   render() {
     return(
-      <button className={`${css.btn} btn`}>{this.props.children}</button>
+      <button className={`${css.btn} btn`}>
+        {this.props.children}
+      </button>
     )
   }
 }

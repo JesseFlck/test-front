@@ -2,28 +2,45 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import css from "./index.module.scss";
-import Events from "../../mocks/events.json"
-
 
 
 // Mise en place de l'élément date
 
 class Date extends Component {
+
+  // Mise en place du constructeur pour récupérer le format de la date
+  constructor() {
+    super();
+    this.state = {
+      day: undefined,
+      month: undefined
+    }
+  }
+
+  datePart = (date) => {
+    const datePart = date.split('/');
+    this.setState({ day: datePart[1]});
+    this.setState({ month: datePart[0]})
+  }
+
+  componentDidMount() {
+    this.datePart(this.props.date)
+  }
+
+
+
   render() {
     return(
      <div className={`${this.props.type === "headerDate" ? css.headerDate : css.cardDate}`}>
-        <p className={`${css.day}`}>23</p>
-        <p className={`${css.month}`}>03</p>
+        <p className={`${css.day}`}>{this.state.day}</p>
+        <p className={`${css.month}`}>{this.state.month}</p>
      </div>
     )
   }
 }
 
-// remettre 'this.props.day' et 'this.props.month' dans le return une fois l'élément récupéré dans event.json dans Pane
-
 
 Date.propTypes = {
-  type: PropTypes.string,
   day: PropTypes.string,
   month: PropTypes.string
 };

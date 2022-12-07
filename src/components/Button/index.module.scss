@@ -8,6 +8,10 @@
   transform: scale(1);
   transition: background-color 1000ms, transform 1000ms;
 
+  > a{
+    color:white;
+  }
+
   &:hover{
     background-color: darken($color-primary, 8%);
     transform: scale(1.1);

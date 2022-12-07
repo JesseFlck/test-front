@@ -5,6 +5,11 @@
 @import "vendors/font-awesome/fa-regular";
 @import "vendors/font-awesome/fa-solid";
 
+@font-face {
+  font-family: "SourceSansPro";
+  src: url("/src/assets/styles/fonts/SourceSansPro/SourceSansPro-Regular.ttf");
+}
+
 
 // Mise en place des variables de couleurs
 
@@ -15,7 +20,7 @@ $color-secondary: #838383;
 // CSS des éléments principaux de la page
 
 body{
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-size: 16px;
   line-height: 1.5;
 }

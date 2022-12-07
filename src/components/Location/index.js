@@ -16,7 +16,9 @@ class Location extends Component {
   }
 }
 
-Location.propTypes = {types: PropTypes.string};
+Location.propTypes = {
+  types: PropTypes.string
+};
 
 Location.defaultProps = {};
 

@@ -16,29 +16,35 @@ import Location from '../../Location';
 class MainEvent extends Component {
   render() {
     return(
-        <div className={`${css.header}`}>
-          <div className={css.cover} style={{ backgroundImage: "url(" + this.props.cover + ")" }}>
-            <div className={css.cover_mainCard}>
-              <div className={css.cover_title}>
-                <div className={css.cover_header}>
-                  <Date type={'headerDate'}></Date>
-                  <Title types={'header'}>{this.props.title}</Title>
-                </div>
-                <div className={css.cover_location}>
-                  <Location types={'headerLocation'}>{this.props.location}</Location>
-                </div>
+      <div className={`${css.header}`}>
+        <div className={css.cover} style={{ backgroundImage: "url(" + this.props.cover + ")" }}>
+          <div className={css.cover_mainCard}>
+            <div className={css.cover_title}>
+              <div className={css.cover_header}>
+                <Date type={'headerDate'} date={this.props.date}/>
+                <Title types={'header'}>{this.props.title}</Title>
               </div>
-              <div className={css.cover_button}>
-                <Button><FontAwesomeIcon icon={faChevronRight} /></Button>
+              <div className={css.cover_location}>
+                <Location types={'headerLocation'}>{this.props.location}</Location>
               </div>
+            </div>
+            <div className={css.cover_button}>
+              <Button><a href={this.props.url}><FontAwesomeIcon icon={faChevronRight} /></a></Button>
             </div>
           </div>
         </div>
+      </div>
     )
   }
 }
 
-MainEvent.propTypes = {};
+MainEvent.propTypes = {
+  cover: PropTypes.string,
+  title: PropTypes.string,
+  date: PropTypes.string,
+  location: PropTypes.string,
+  url: PropTypes.string
+};
 
 MainEvent.defaultProps = {};
 

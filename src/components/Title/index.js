@@ -14,7 +14,9 @@ class Title extends Component {
   }
 }
 
-Title.propTypes = {types: PropTypes.string};
+Title.propTypes = {
+  types: PropTypes.string
+};
 
 Title.defaultProps = {};
 
