@@ -1,19 +1,19 @@
-:global{
-  .btn-primary{
-    background-color:$color-primary;
-    border-color:$color-primary;
-
-    &:hover, &:focus, &:active, &:not(:disabled):not(.disabled):active{
-      background-color: darken($color-primary, 8%);
-      border-color: darken($color-primary, 8%);
-    }
-  }
-}
-
 .btn{
+  background-color: $color-primary;
+  border: none;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  color: white;
+  transform: scale(1);
+  transition: background-color 1000ms, transform 1000ms;
 
-}
+  > a{
+    color:white;
+  }
 
-.sm{
-
+  &:hover{
+    background-color: darken($color-primary, 8%);
+    transform: scale(1.1);
+  }
 }

@@ -1,0 +1,14 @@
+.location {
+  font-size: 17px;
+  font-weight: 500;
+  z-index: 998;
+
+  &_card{
+    color: $color-secondary;
+  }
+
+  &_header{
+    font-style: italic;
+    color: white;
+  }
+}

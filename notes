@@ -1,0 +1,18 @@
+Modifications effectuées :
+
+- La police globale Source Sans Pro a été mise
+- Les dates sont interactives en fonction des données du mock
+- Les cards secondaires sont cliquables (pour la card principale, c'est le bouton qui mène au site)
+
+
+- Le dossier Pane contient deux sous-dossiers (MainEvent et SmallEvent) qui comportent
+    les card réutilisables pour chaque type d'événement.
+
+- Pane contient également un fichier global pour boucler sur les éléments et les
+    afficher en intégrant les données d'events.json.
+
+- L'élément affiché dans le composant "Main Page" est pour l'instant fixé sur le premier
+    événement d'events.json mais le but final sera de pouvoir cliquer sur chaque événement
+    secondaire afin de le faire passer en événement principal (cliquer sur les card en
+    question mène pour l'instant au site de l'événement en question et non pas au changement
+    d'index qui défini le mainEvent)

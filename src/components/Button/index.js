@@ -3,23 +3,23 @@ import PropTypes from 'prop-types';
 
 import css from "./index.module.scss";
 
+
+// Mise en place du bouton de l'événement principal
+
 class Button extends Component {
   render() {
     return(
-      <button className={`${css.btn} btn ${'btn-' + this.props.type} ${'btn-' + this.props.size}`}>{this.props.children}</button>
+      <button className={`${css.btn} btn`}>
+        {this.props.children}
+      </button>
     )
   }
 }
 
-Button.propTypes = {
-  type: PropTypes.string,
-  size: PropTypes.string
-};
 
-Button.defaultProps = {
-  type: "primary",
-  size: "md"
-};
+Button.propTypes = {};
+
+Button.defaultProps = {};
 
 
 export default Button;

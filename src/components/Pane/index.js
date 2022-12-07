@@ -1,34 +1,38 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
+import { storiesOf } from "@storybook/react";
 
-import Button from '../Button'
-import Title from '../Title'
+import MainEvent from './MainEvent';
+import SmallEvents from './SmallEvent';
+import Img from './gardener_cover.png';
 
-import css from "./index.module.scss";
+import Events from '../../mocks/events.json';
 
-class Pane extends Component {
-  render() {
-    return(
-      <div className={`${css.pane} ${this.props.cover ? css.withCover : ''}`}>
-        {
-          this.props.cover && (
-            <div className={css.cover} style={{ backgroundImage: "url(" + this.props.cover + ")" }}></div>
-          )
-        }
-        <Title>{this.props.title}</Title>
-        <Button size="sm"><i className="fa fa-arrow-right"></i></Button>
-      </div>
-    )
-  }
-}
 
-Pane.propTypes = {
-  cover: PropTypes.string,
-  title: PropTypes.string
-};
+// Affichage de la page principale selon la maquette
 
-Pane.defaultProps = {
-  title: "Default title"
-};
-
-export default Pane;
+storiesOf('Exercise/Components/Pane', module)
+  .add("main page", () => (
+    <div>
+      {Events.map ((event, index) =>
+        index == 0 ?
+          <MainEvent 
+            index= {event.index}
+            date= {event.date}
+            title= {event.title} 
+            cover= {event.cover == "gardener_cover.png" ? Img : event.cover}
+            url= {event.url}
+            location= {event.address.place}
+          />
+        :
+          <SmallEvents
+            //onClick= {changeIndex}
+            index= {event.index}
+            icon= {event.icon}
+            date= {event.date}
+            title= {event.title}
+            url= {event.url}
+            location= {event.address.place}
+          />
+      )}
+    </div>
+  ))

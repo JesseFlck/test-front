@@ -3,7 +3,14 @@ import { storiesOf } from "@storybook/react";
 
 import Title from "./";
 
+
 storiesOf('Exercise/Components/Title', module)
-  .add('default', () => (
-    <Title>My title</Title>
+  .add('headerTitle', () => (
+    <Title types={'header'}>
+      Titre header
+    </Title>
+  )).add('cardTitle', () => (
+    <Title types={'card'}>
+      Titre card
+    </Title>
   ))
